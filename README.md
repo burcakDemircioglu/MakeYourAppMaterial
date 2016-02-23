@@ -1,19 +1,18 @@
 # Make Your App Material
 
-In this project XYZ Reader app will be improved by
-taking the user feedback in the UI Review node, and implement changes that will improve the UI and make it conform to Material Design.
+In this project XYZ Reader app will be improved by taking the user feedback in the UI Review node, and changes will be implemented to improve the UI and to make it conform to Material Design.
 
 XYZ Reader: A mock RSS feed reader featuring banner photos and shocking headlines!
 
 ## Supporting Courses
 
-You should have the skills you need to complete this app after completing:
+The skills that needed to complete this app would be gained after completing the following courses:
 - Developing Android Apps
 - Advanced Android App Development
-- Material Design for Android Developers (This course.)
+- Material Design for Android Developers
 You can also refer to the Material Design specification.
 
-## User Feedback for XYZ Reader:
+## User Feedback for XYZ Reader To Be Used for Improvements:
 
 ### Lyla says:
 “This app is starting to shape up but it feels a bit off in quite a few places. I can't put finger on it but it feels odd.”
