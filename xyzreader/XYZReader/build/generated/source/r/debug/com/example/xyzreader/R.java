@@ -1379,18 +1379,19 @@ containing a value of this type.
         public static final int detail_metabar_title_bottom_padding=0x7f080033;
         public static final int detail_metabar_vert_padding=0x7f080034;
         public static final int detail_photo_height=0x7f080035;
-        public static final int detail_title_text_size=0x7f080036;
-        public static final int dialog_fixed_height_major=0x7f080037;
-        public static final int dialog_fixed_height_minor=0x7f080038;
-        public static final int dialog_fixed_width_major=0x7f080039;
-        public static final int dialog_fixed_width_minor=0x7f08003a;
-        public static final int disabled_alpha_material_dark=0x7f08003b;
-        public static final int disabled_alpha_material_light=0x7f08003c;
-        public static final int fab_elevation=0x7f08003d;
-        public static final int fab_margin=0x7f08003e;
-        public static final int fab_press_translation_z=0x7f08003f;
-        public static final int list_side_margin=0x7f080040;
-        public static final int list_toolbar_side_margin=0x7f080041;
+        public static final int detail_title_bar_elevation=0x7f080036;
+        public static final int detail_title_text_size=0x7f080037;
+        public static final int dialog_fixed_height_major=0x7f080038;
+        public static final int dialog_fixed_height_minor=0x7f080039;
+        public static final int dialog_fixed_width_major=0x7f08003a;
+        public static final int dialog_fixed_width_minor=0x7f08003b;
+        public static final int disabled_alpha_material_dark=0x7f08003c;
+        public static final int disabled_alpha_material_light=0x7f08003d;
+        public static final int fab_elevation=0x7f08003e;
+        public static final int fab_margin=0x7f08003f;
+        public static final int fab_press_translation_z=0x7f080040;
+        public static final int list_side_margin=0x7f080041;
+        public static final int list_toolbar_side_margin=0x7f080042;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;

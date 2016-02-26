@@ -11,21 +11,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="466b66a0-207a-47af-8b56-45de7ec103b4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$dimen.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$drawable.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$fraction.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$fraction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$id.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$integer.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$layout.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$menu.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$mipmap.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$mipmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$string.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$style.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$styleable.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R.class" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/classes/debug/com/example/xyzreader/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/outputs/apk/XYZReader-debug-unaligned.apk" afterPath="$PROJECT_DIR$/XYZReader/build/outputs/apk/XYZReader-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/outputs/apk/XYZReader-debug.apk" afterPath="$PROJECT_DIR$/XYZReader/build/outputs/apk/XYZReader-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/XYZReader/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/generated/source/r/debug/com/example/xyzreader/R.java" afterPath="$PROJECT_DIR$/XYZReader/build/generated/source/r/debug/com/example/xyzreader/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/XYZReader/src/main/res/values/dimens.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/res/debug/layout/fragment_article_detail.xml" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/res/debug/layout/fragment_article_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/src/main/res/layout/fragment_article_detail.xml" afterPath="$PROJECT_DIR$/XYZReader/src/main/res/layout/fragment_article_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/res/debug/layout/list_item_article.xml" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/res/debug/layout/list_item_article.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/src/main/res/layout/list_item_article.xml" afterPath="$PROJECT_DIR$/XYZReader/src/main/res/layout/list_item_article.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/incremental/mergeResources/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XYZReader/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/XYZReader/build/intermediates/res/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xyzreader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,26 +102,26 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.2948403">
-              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+              <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
               <folding>
                 <element signature="e#1067#1095#0" expanded="true" />
                 <element signature="e#1741#1771#0" expanded="true" />
                 <element signature="e#1895#1926#0" expanded="true" />
-                <element signature="e#2352#2386#0" expanded="true" />
-                <element signature="e#2428#2462#0" expanded="true" />
-                <element signature="e#2502#2538#0" expanded="true" />
-                <element signature="e#2581#2617#0" expanded="true" />
-                <element signature="e#2666#2702#0" expanded="true" />
-                <element signature="e#3024#3068#0" expanded="true" />
-                <element signature="e#3274#3305#0" expanded="true" />
-                <element signature="e#4029#4063#0" expanded="true" />
-                <element signature="e#4111#4145#0" expanded="true" />
-                <element signature="e#4188#4222#0" expanded="true" />
-                <element signature="e#4382#4412#0" expanded="true" />
-                <element signature="e#4897#4916#0" expanded="true" />
-                <element signature="e#4953#4972#0" expanded="true" />
-                <element signature="e#5113#5135#0" expanded="true" />
-                <element signature="e#5171#5193#0" expanded="true" />
+                <element signature="e#2382#2416#0" expanded="true" />
+                <element signature="e#2458#2492#0" expanded="true" />
+                <element signature="e#2532#2568#0" expanded="true" />
+                <element signature="e#2611#2647#0" expanded="true" />
+                <element signature="e#2696#2732#0" expanded="true" />
+                <element signature="e#3054#3098#0" expanded="true" />
+                <element signature="e#3304#3335#0" expanded="true" />
+                <element signature="e#4059#4093#0" expanded="true" />
+                <element signature="e#4141#4175#0" expanded="true" />
+                <element signature="e#4218#4252#0" expanded="true" />
+                <element signature="e#4412#4442#0" expanded="true" />
+                <element signature="e#4927#4946#0" expanded="true" />
+                <element signature="e#4983#5002#0" expanded="true" />
+                <element signature="e#5143#5165#0" expanded="true" />
+                <element signature="e#5201#5223#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/XYZReader/src/main/res/values/dimens.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1403,9 +1417,9 @@
         <option value="$PROJECT_DIR$/XYZReader/src/main/java/com/example/xyzreader/ui/ArticleListActivity.java" />
         <option value="$PROJECT_DIR$/XYZReader/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/XYZReader/src/main/res/values/macro_layout.xml" />
-        <option value="$PROJECT_DIR$/XYZReader/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/XYZReader/src/main/res/layout/list_item_article.xml" />
         <option value="$PROJECT_DIR$/XYZReader/src/main/res/layout/fragment_article_detail.xml" />
+        <option value="$PROJECT_DIR$/XYZReader/src/main/res/values/dimens.xml" />
       </list>
     </option>
   </component>
@@ -2188,7 +2202,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4005168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4005168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2297,21 +2311,21 @@
             <element signature="e#1067#1095#0" expanded="true" />
             <element signature="e#1741#1771#0" expanded="true" />
             <element signature="e#1895#1926#0" expanded="true" />
-            <element signature="e#2352#2386#0" expanded="true" />
-            <element signature="e#2428#2462#0" expanded="true" />
-            <element signature="e#2502#2538#0" expanded="true" />
-            <element signature="e#2581#2617#0" expanded="true" />
-            <element signature="e#2666#2702#0" expanded="true" />
-            <element signature="e#3024#3068#0" expanded="true" />
-            <element signature="e#3274#3305#0" expanded="true" />
-            <element signature="e#4029#4063#0" expanded="true" />
-            <element signature="e#4111#4145#0" expanded="true" />
-            <element signature="e#4188#4222#0" expanded="true" />
-            <element signature="e#4382#4412#0" expanded="true" />
-            <element signature="e#4897#4916#0" expanded="true" />
-            <element signature="e#4953#4972#0" expanded="true" />
-            <element signature="e#5113#5135#0" expanded="true" />
-            <element signature="e#5171#5193#0" expanded="true" />
+            <element signature="e#2382#2416#0" expanded="true" />
+            <element signature="e#2458#2492#0" expanded="true" />
+            <element signature="e#2532#2568#0" expanded="true" />
+            <element signature="e#2611#2647#0" expanded="true" />
+            <element signature="e#2696#2732#0" expanded="true" />
+            <element signature="e#3054#3098#0" expanded="true" />
+            <element signature="e#3304#3335#0" expanded="true" />
+            <element signature="e#4059#4093#0" expanded="true" />
+            <element signature="e#4141#4175#0" expanded="true" />
+            <element signature="e#4218#4252#0" expanded="true" />
+            <element signature="e#4412#4442#0" expanded="true" />
+            <element signature="e#4927#4946#0" expanded="true" />
+            <element signature="e#4983#5002#0" expanded="true" />
+            <element signature="e#5143#5165#0" expanded="true" />
+            <element signature="e#5201#5223#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2568,14 +2582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XYZReader/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XYZReader/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.5555553">
@@ -2626,32 +2632,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/XYZReader/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/XYZReader/src/main/res/layout/fragment_article_detail.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2948403">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
           <folding>
             <element signature="e#1067#1095#0" expanded="true" />
             <element signature="e#1741#1771#0" expanded="true" />
             <element signature="e#1895#1926#0" expanded="true" />
-            <element signature="e#2352#2386#0" expanded="true" />
-            <element signature="e#2428#2462#0" expanded="true" />
-            <element signature="e#2502#2538#0" expanded="true" />
-            <element signature="e#2581#2617#0" expanded="true" />
-            <element signature="e#2666#2702#0" expanded="true" />
-            <element signature="e#3024#3068#0" expanded="true" />
-            <element signature="e#3274#3305#0" expanded="true" />
-            <element signature="e#4029#4063#0" expanded="true" />
-            <element signature="e#4111#4145#0" expanded="true" />
-            <element signature="e#4188#4222#0" expanded="true" />
-            <element signature="e#4382#4412#0" expanded="true" />
-            <element signature="e#4897#4916#0" expanded="true" />
-            <element signature="e#4953#4972#0" expanded="true" />
-            <element signature="e#5113#5135#0" expanded="true" />
-            <element signature="e#5171#5193#0" expanded="true" />
+            <element signature="e#2382#2416#0" expanded="true" />
+            <element signature="e#2458#2492#0" expanded="true" />
+            <element signature="e#2532#2568#0" expanded="true" />
+            <element signature="e#2611#2647#0" expanded="true" />
+            <element signature="e#2696#2732#0" expanded="true" />
+            <element signature="e#3054#3098#0" expanded="true" />
+            <element signature="e#3304#3335#0" expanded="true" />
+            <element signature="e#4059#4093#0" expanded="true" />
+            <element signature="e#4141#4175#0" expanded="true" />
+            <element signature="e#4218#4252#0" expanded="true" />
+            <element signature="e#4412#4442#0" expanded="true" />
+            <element signature="e#4927#4946#0" expanded="true" />
+            <element signature="e#4983#5002#0" expanded="true" />
+            <element signature="e#5143#5165#0" expanded="true" />
+            <element signature="e#5201#5223#0" expanded="true" />
           </folding>
         </state>
       </provider>
