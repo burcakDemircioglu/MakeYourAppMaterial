@@ -292,6 +292,9 @@
     <dimen name="snackbar_text_size">14sp</dimen>
     <dimen name="tab_max_width">264dp</dimen>
     <dimen name="tab_min_width">72dp</dimen>
+    <!-- From: file:/Users/burcakdemircioglu/MakeYourAppMaterial/xyzreader/XYZReader/src/main/res/values/macro_layout.xml -->
+    <eat-comment/>
+    <dimen name="title_side_margin">8dp</dimen>
     <!-- From: file:/Users/burcakdemircioglu/MakeYourAppMaterial/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>

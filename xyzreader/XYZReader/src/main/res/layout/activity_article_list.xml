@@ -31,7 +31,7 @@
                 />
 
             <ImageView
-                android:layout_marginLeft="10dp"
+                android:paddingLeft="@dimen/title_side_margin"
                 android:layout_gravity="bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
