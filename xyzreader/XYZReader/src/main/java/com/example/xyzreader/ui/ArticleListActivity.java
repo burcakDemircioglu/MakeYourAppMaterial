@@ -1,5 +1,7 @@
 package com.example.xyzreader.ui;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -97,7 +99,7 @@ public class ArticleListActivity extends ActionBarActivity implements
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        Adapter adapter = new Adapter(cursor);
+        Adapter adapter = new Adapter(cursor, this);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
         int columnCount = getResources().getInteger(R.integer.list_column_count);
@@ -113,8 +115,11 @@ public class ArticleListActivity extends ActionBarActivity implements
 
     private class Adapter extends RecyclerView.Adapter<ViewHolder> {
         private Cursor mCursor;
+        private Activity thisActivity;
 
-        public Adapter(Cursor cursor) {
+        public Adapter(Cursor cursor, Activity activity) {
+
+            thisActivity=activity;
             mCursor = cursor;
         }
 
@@ -131,18 +136,13 @@ public class ArticleListActivity extends ActionBarActivity implements
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                   /* Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(
-                            this,
-                            view,
-                            view.getTransitionName())
+                   Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(thisActivity)
                             .toBundle();
 
-                    )
-                    */
                     Intent intent=new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition())));
-                    //startActivity(intent, bundle);
-                    startActivity(intent);
+                    startActivity(intent, bundle);
+                    //startActivity(intent);
                 }
             });
             return vh;
