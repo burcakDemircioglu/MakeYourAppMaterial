@@ -29,4 +29,5 @@ You can also refer to the Material Design specification.
 - Change the list view's bar to be a collapsing bar
 - Add transitions between activities
 - Adapt the app to different screen sizes and api(s)
-- Check the 
+- Check the elevations and change them in order to obey the Material Design Standards
+- ..
