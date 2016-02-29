@@ -22,3 +22,11 @@ You can also refer to the Material Design specification.
 
 ### Kagure says:
 “The color scheme is really sad and I shouldn't feel sad.”
+
+## Tasks To Be Done:
+- Change the color scheme by configuring the app style
+- Change image size problem both in detail and list view
+- Change the list view's bar to be a collapsing bar
+- Add transitions between activities
+- Adapt the app to different screen sizes and api(s)
+- Check the 
