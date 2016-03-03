@@ -267,6 +267,9 @@
             <item name="android:windowExitTransition">@transition/grid_exit</item>
             <item name="android:windowEnterTransition">@android:transition/slide_right</item>
             <item name="android:windowReenterTransition">@android:transition/explode</item>
+            <item name="android:windowSharedElementExitTransition">@android:transition/fade</item>
+            <item name="android:windowSharedElementReenterTransition">@android:transition/fade</item>
+            <item name="android:windowTransitionBackgroundFadeDuration">100</item>
         </style>
     <style name="Theme.Bacon.Detail">
             <item name="android:statusBarColor">@android:color/transparent</item>

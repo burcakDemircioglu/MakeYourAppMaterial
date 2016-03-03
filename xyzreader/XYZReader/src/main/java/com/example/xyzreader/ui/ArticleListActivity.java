@@ -132,11 +132,17 @@ public class ArticleListActivity extends ActionBarActivity implements
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
+
             final ViewHolder vh = new ViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                   Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(thisActivity)
+                    final View sharedView=view.findViewById(R.id.thumbnail);
+                    sharedView.setTransitionName(getString(R.string.transition_photo));
+                   Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(
+                           thisActivity,
+                           sharedView,
+                           getString(R.string.transition_photo))
                             .toBundle();
 
                     Intent intent=new Intent(Intent.ACTION_VIEW,
