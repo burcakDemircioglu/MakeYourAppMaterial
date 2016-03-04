@@ -26,7 +26,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/detail_photo_height"
                     android:scaleType="centerCrop"
-                    android:transitionName="@string/transition_photo"
                      />
 <!--
                 <View

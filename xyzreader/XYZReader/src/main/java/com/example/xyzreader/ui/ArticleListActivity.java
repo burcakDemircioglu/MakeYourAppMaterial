@@ -3,6 +3,7 @@ package com.example.xyzreader.ui;
 import android.app.Activity;
 import android.app.ActivityOptions;
 import android.app.LoaderManager;
+import android.app.SharedElementCallback;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -19,12 +20,16 @@ import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
 import com.example.xyzreader.data.UpdaterService;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * An activity representing a list of Articles. This activity has different presentations for
@@ -39,10 +44,55 @@ public class ArticleListActivity extends ActionBarActivity implements
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
 
+    static final String EXTRA_STARTING_ALBUM_POSITION = "extra_starting_item_position";
+    static final String EXTRA_CURRENT_ALBUM_POSITION = "extra_current_item_position";
+
+    private Bundle mTmpReenterState;
+
+    private final SharedElementCallback mCallback = new SharedElementCallback() {
+        @Override
+        public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
+            if (mTmpReenterState != null) {
+                int startingPosition = mTmpReenterState.getInt(EXTRA_STARTING_ALBUM_POSITION);
+                int currentPosition = mTmpReenterState.getInt(EXTRA_CURRENT_ALBUM_POSITION);
+                if (startingPosition != currentPosition) {
+                    // If startingPosition != currentPosition the user must have swiped to a
+                    // different page in the DetailsActivity. We must update the shared element
+                    // so that the correct one falls into place.
+                    String newTransitionName = Integer.toString(currentPosition);
+                    View newSharedElement = mRecyclerView.findViewWithTag(newTransitionName);
+                    if (newSharedElement != null) {
+                        names.clear();
+                        names.add(newTransitionName);
+                        //Log.e("control", newTransitionName);
+
+                        sharedElements.clear();
+                        sharedElements.put(newTransitionName, newSharedElement);
+                    }
+                }
+
+                mTmpReenterState = null;
+            } else {
+                // If mTmpReenterState is null, then the activity is exiting.
+                View navigationBar = findViewById(android.R.id.navigationBarBackground);
+                View statusBar = findViewById(android.R.id.statusBarBackground);
+                if (navigationBar != null) {
+                    names.add(navigationBar.getTransitionName());
+                    sharedElements.put(navigationBar.getTransitionName(), navigationBar);
+                }
+                if (statusBar != null) {
+                    names.add(statusBar.getTransitionName());
+                    sharedElements.put(statusBar.getTransitionName(), statusBar);
+                }
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
+        setExitSharedElementCallback(mCallback);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -57,6 +107,31 @@ public class ArticleListActivity extends ActionBarActivity implements
         if (savedInstanceState == null) {
             refresh();
         }
+    }
+    @Override
+    public void onActivityReenter(int requestCode, Intent data) {
+        super.onActivityReenter(requestCode, data);
+        mTmpReenterState = new Bundle(data.getExtras());
+        int startingPosition = mTmpReenterState.getInt(EXTRA_STARTING_ALBUM_POSITION);
+        int currentPosition = mTmpReenterState.getInt(EXTRA_CURRENT_ALBUM_POSITION);
+        //Log.e("positionCurrent",Integer.toString(currentPosition));
+        //Log.e("positionStarting",Integer.toString(startingPosition));
+        if (startingPosition != currentPosition) {
+            mRecyclerView.scrollToPosition(currentPosition-2);
+        }
+
+        postponeEnterTransition();
+        mRecyclerView.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                mRecyclerView.getViewTreeObserver().removeOnPreDrawListener(this);
+                // TODO: figure out why it is necessary to request layout here in order to get a smooth transition.
+                mRecyclerView.requestLayout();
+                startPostponedEnterTransition();
+                return true;
+            }
+        });
+
     }
 
     private void refresh() {
@@ -138,13 +213,13 @@ public class ArticleListActivity extends ActionBarActivity implements
                 @Override
                 public void onClick(View view) {
                     final View sharedView=view.findViewById(R.id.thumbnail);
-                    sharedView.setTransitionName(getString(R.string.transition_photo));
-                   Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(
+
+                    Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(
                            thisActivity,
                            sharedView,
-                           getString(R.string.transition_photo))
+                           sharedView.getTransitionName())
                             .toBundle();
-
+                    //Log.e("onClickTransitionName", sharedView.getTransitionName());
                     Intent intent=new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition())));
                     startActivity(intent, bundle);
@@ -169,6 +244,10 @@ public class ArticleListActivity extends ActionBarActivity implements
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
             holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+            holder.thumbnailView.setTransitionName(Integer.toString(position));
+            holder.thumbnailView.setTag(Integer.toString(position));
+            //Log.e("positionTransNameInList", Integer.toString(position));
+
             holder.titleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Roboto-Light.ttf"));
             holder.subtitleView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Roboto-Light.ttf"));
 

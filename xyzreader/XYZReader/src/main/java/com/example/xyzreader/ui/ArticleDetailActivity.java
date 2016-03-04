@@ -3,11 +3,14 @@ package com.example.xyzreader.ui;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.LoaderManager;
+import android.app.SharedElementCallback;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -15,10 +18,14 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
+import android.widget.ImageView;
 
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * An activity representing a single Article detail screen, letting you swipe between articles.
@@ -33,14 +40,68 @@ public class ArticleDetailActivity extends ActionBarActivity
     private int mSelectedItemUpButtonFloor = Integer.MAX_VALUE;
     private int mTopInset;
 
+    private boolean mIsReturning;
+    private ArticleDetailFragment mCurrentDetailsFragment;
+    private int mCurrentPosition;
+    private int mStartingPosition;
+
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
     private View mUpButtonContainer;
     private View mUpButton;
+    static final String EXTRA_STARTING_ALBUM_POSITION = "extra_starting_item_position";
+    static final String EXTRA_CURRENT_ALBUM_POSITION = "extra_current_item_position";
+    private static final String STATE_CURRENT_PAGE_POSITION = "state_current_page_position";
 
+    private final SharedElementCallback mCallback = new SharedElementCallback() {
+        @Override
+        public void onMapSharedElements(List<String> names, Map<String, View> sharedElements) {
+            if (mIsReturning) {
+                ImageView sharedElement = mCurrentDetailsFragment.getPhotoView();
+                if (sharedElement == null) {
+                    // If shared element is null, then it has been scrolled off screen and
+                    // no longer visible. In this case we cancel the shared element transition by
+                    // removing the shared element from the shared elements map.
+                    names.clear();
+                    sharedElements.clear();
+                } else if (mStartingPosition != mCurrentPosition) {
+                    // If the user has swiped to a different ViewPager page, then we need to
+                    // remove the old shared element and replace it with the new shared element
+                    // that should be transitioned instead.
+                    names.clear();
+                    names.add(sharedElement.getTransitionName());
+                    sharedElements.clear();
+                    sharedElements.put(sharedElement.getTransitionName(), sharedElement);
+                }
+            }
+        }
+    };
+    @Override
+    public void finishAfterTransition() {
+        mIsReturning = true;
+        Intent data = new Intent();
+        data.putExtra(EXTRA_STARTING_ALBUM_POSITION, mStartingPosition);
+        data.putExtra(EXTRA_CURRENT_ALBUM_POSITION, mCurrentPosition);
+        setResult(RESULT_OK, data);
+        super.finishAfterTransition();
+    }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(STATE_CURRENT_PAGE_POSITION, mCurrentPosition);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setEnterSharedElementCallback(mCallback);
+
+        mStartingPosition = getIntent().getIntExtra(EXTRA_STARTING_ALBUM_POSITION, 0);
+        if (savedInstanceState == null) {
+            mCurrentPosition = mStartingPosition;
+        } else {
+            mCurrentPosition = savedInstanceState.getInt(STATE_CURRENT_PAGE_POSITION);
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
@@ -57,7 +118,7 @@ public class ArticleDetailActivity extends ActionBarActivity
                 .applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics()));
         mPager.setPageMarginDrawable(new ColorDrawable(0x22000000));
 
-        mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+        mPager.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageScrollStateChanged(int state) {
                 super.onPageScrollStateChanged(state);
@@ -73,6 +134,9 @@ public class ArticleDetailActivity extends ActionBarActivity
                 }
                 mSelectedItemId = mCursor.getLong(ArticleLoader.Query._ID);
                 updateUpButtonPosition();
+
+                mCurrentPosition = position;
+                //Log.e("positionChangePage", Integer.toString(mCurrentPosition));
             }
         });
 
@@ -161,6 +225,7 @@ public class ArticleDetailActivity extends ActionBarActivity
         public void setPrimaryItem(ViewGroup container, int position, Object object) {
             super.setPrimaryItem(container, position, object);
             ArticleDetailFragment fragment = (ArticleDetailFragment) object;
+            mCurrentDetailsFragment=fragment;
             if (fragment != null) {
                 mSelectedItemUpButtonFloor = fragment.getUpButtonFloor();
                 updateUpButtonPosition();
@@ -170,7 +235,8 @@ public class ArticleDetailActivity extends ActionBarActivity
         @Override
         public Fragment getItem(int position) {
             mCursor.moveToPosition(position);
-            return ArticleDetailFragment.newInstance(mCursor.getLong(ArticleLoader.Query._ID));
+            //Log.e("positionFromPager", Integer.toString(position));
+            return ArticleDetailFragment.newInstance(mCursor.getLong(ArticleLoader.Query._ID), mStartingPosition, position);
         }
 
         @Override

@@ -54,6 +54,12 @@ public class ArticleDetailFragment extends Fragment implements
     private int mScrollY;
     private boolean mIsCard = false;
     private int mStatusBarFullOpacityBottom;
+    private static final String ARG_STARTING_ALBUM_IMAGE_POSITION = "arg_starting_album_image_position";
+    private static final String ARG_ALBUM_IMAGE_POSITION = "arg_album_image_position";
+
+    private int mStartingPosition;
+    private int mPosition;
+
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -62,9 +68,15 @@ public class ArticleDetailFragment extends Fragment implements
     public ArticleDetailFragment() {
     }
 
-    public static ArticleDetailFragment newInstance(long itemId) {
+    public ImageView getPhotoView(){
+        return mPhotoView;
+    }
+    public static ArticleDetailFragment newInstance(long itemId, int startingPosition, int position) {
         Bundle arguments = new Bundle();
         arguments.putLong(ARG_ITEM_ID, itemId);
+        arguments.putInt(ARG_STARTING_ALBUM_IMAGE_POSITION, startingPosition);
+        arguments.putInt(ARG_ALBUM_IMAGE_POSITION, position);
+        //Log.e("onClickDetailNewInstance",Integer.toString(position));
         ArticleDetailFragment fragment = new ArticleDetailFragment();
         fragment.setArguments(arguments);
         return fragment;
@@ -76,6 +88,14 @@ public class ArticleDetailFragment extends Fragment implements
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             mItemId = getArguments().getLong(ARG_ITEM_ID);
+        }
+
+        if (getArguments().containsKey(ARG_STARTING_ALBUM_IMAGE_POSITION)) {
+            mStartingPosition = getArguments().getInt(ARG_STARTING_ALBUM_IMAGE_POSITION);
+        }
+
+        if (getArguments().containsKey(ARG_ALBUM_IMAGE_POSITION)) {
+            mPosition = getArguments().getInt(ARG_ALBUM_IMAGE_POSITION);
         }
 
         mIsCard = getResources().getBoolean(R.bool.detail_is_card);
@@ -124,7 +144,9 @@ public class ArticleDetailFragment extends Fragment implements
         });
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
-       // mPhotoView.setTransitionName(getString(R.string.transition_photo));
+        mPhotoView.setTransitionName(Integer.toString(mPosition));
+        //Log.e("onClickTransNameDetail", Integer.toString(mPosition));
+
         mPhotoContainerView = mRootView.findViewById(R.id.photo_container);
 
         mStatusBarColorDrawable = new ColorDrawable(0);

@@ -2641,10 +2641,6 @@ containing a value of this type.
         public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0e00d8;
         public static final int Theme_AppCompat_Light_NoActionBar=0x7f0e00d9;
         public static final int Theme_AppCompat_NoActionBar=0x7f0e00da;
-        /**  <item name="android:windowSharedElementExitTransition">@android:transition/fade</item>
-            <item name="android:windowSharedElementReenterTransition">@android:transition/fade</item>
-            
-         */
         public static final int Theme_Bacon=0x7f0e00db;
         public static final int Theme_Bacon_Detail=0x7f0e00dc;
         public static final int ThemeOverlay_AppCompat=0x7f0e00dd;
