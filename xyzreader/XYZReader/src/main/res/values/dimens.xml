@@ -8,5 +8,8 @@
     <dimen name="fab_elevation">6dp</dimen>
     <dimen name="fab_press_translation_z">3dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
+    <dimen name="cardMargin">4dp</dimen>
+    <dimen name="cardTextViewPadding">16dp</dimen>
+    <dimen name="cardTextViewPaddingBottom">4dp</dimen>
 
 </resources>
